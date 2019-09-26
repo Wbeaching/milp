@@ -46,7 +46,7 @@ int main() {
     int i=0,j;
     ifstream in("test.txt");
     vector<vector<int>> pd;     //possible diffierential pattern
-        vector<int> sbox={12,5,6,11,9,0,10,13,3,14,15,8,4,7,1,2};
+    vector<int> sbox={12,5,6,11,9,0,10,13,3,14,15,8,4,7,1,2};
 //    vector<int> sbox={6,5,12,10,1,14,7,9,11,0,3,13,8,15,4,2};       //rectangle
     vector<vector<int>> pre =ddt(sbox);
     cout<<"差分分布表大小:"<<pre.size()<<"x"<<pre[0].size()<<endl;       //输出差分表
