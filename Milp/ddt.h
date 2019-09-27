@@ -9,13 +9,14 @@
 #ifndef ddt_h
 #define ddt_h
 #include <vector>
-vector<int> convert10to2(int a,int n)       //n为比特数
+extern const int n;
+vector<int> convert10to2(int a,int t)       //t为比特数
 {
-    vector<int> c(n);
+    vector<int> c(t);
     int i=1;
     while(a!=0)
     {
-        c[n-i]=a%2;
+        c[t-i]=a%2;
         a=a/2;
         i++;
     }
@@ -30,22 +31,21 @@ int convert2to10(vector<int> c)
     }
     return a;
 }
-int Xor(int a,int b)    //两个10进制数，按位xor以后变成另一个十进制数
+int Xor(int a,int b,int t)    //两个10进制数，按位xor以后变成另一个十进制数,t表示长度
 {
     int i=1;
-    int n=4;
-    vector<int> aa(n);
-    vector<int> bb(n);
+    vector<int> aa(t);
+    vector<int> bb(t);
     while(a!=0)
     {
-        aa[n-i]=a%2;
+        aa[t-i]=a%2;
         a=a/2;
         i++;
     }
     int j=1;
     while(b!=0)
     {
-        bb[n-j]=b%2;
+        bb[t-j]=b%2;
         b=b/2;
         j++;
     }
@@ -73,13 +73,13 @@ vector<vector<int>> ddt(vector<int> sbox)
     vector<vector<int>> diff;   //储存所有可能的4bit数据
     for(i=0;i<16;i++)
     {
-        diff.push_back(convert10to2(i,4));
+        diff.push_back(convert10to2(i,n/2));
     }
     //i遍历所有的输入
     for(i=0;i<16;i++){
         for(j=0;j<16;j++){
-            a=Xor(i,j);
-            b=Xor(sbox[i],sbox[j]);
+            a=Xor(i,j,n/2);
+            b=Xor(sbox[i],sbox[j],n/2);
             res[a][b]++;
         }
     }
