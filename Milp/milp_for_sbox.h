@@ -34,21 +34,23 @@ void milp_for_sbox(vector<vector<int>> del,vector<vector<int>> id) //del[i]å‚¨å­
 //        }
     outFile<<"Minimize"<<endl;
     for(i=0;i<=del.size()-1;i++){
-        outFile<<"z"<<i<<"+";
+        outFile<<"z"<<i<<" "<<"+ ";
     }
-    outFile<<"z"<<i<<endl;
+    outFile<<"z"<<i<<" "<<endl;
+    outFile<<endl;
+    outFile<<"Subject To"<<endl;
     for(i=0;i<model.size();i++){
         if(!model[i].empty())
         {
             for(j=0;j<model[i].size()-1;j++){
-                outFile<<"z"<< model[i][j]<<"+";
+                outFile<<"z"<< model[i][j]<<" "<<"+ ";
             }
-                outFile<<"z"<< model[i][j]<<">="<<"-1"<<endl;
+                outFile<<"z"<< model[i][j]<<" "<<">="<<" 1"<<endl;
             }
     }
     outFile<<"Binary"<<endl;
     for(i=0;i<del.size();i++){
-        outFile<<"z"<<i<<endl;
+        outFile<<"z"<<i<<" "<<endl;
     }
 
 }

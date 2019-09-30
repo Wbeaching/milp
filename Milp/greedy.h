@@ -16,7 +16,7 @@ vector<vector<int>> greedy (vector<vector<int>> id,vector<vector<int>> ieq)
     vector<vector<int>> res;
     int i,flag,max,step=0;
     vector<vector<int>> del;
-    while(id.size()!=0&&step<=30){
+    while(id.size()!=0&&step<=50){
         step++;
         del.clear();
         del=delete_im(id,ieq);  //由不等式集和不可行点集生成del，用来判断最大
