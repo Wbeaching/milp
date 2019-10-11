@@ -28,6 +28,9 @@
 		6511BF092338C80700DB6A8B /* milp_for_sbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = milp_for_sbox.h; sourceTree = "<group>"; };
 		651263BF2335BED400704C58 /* Milp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Milp; sourceTree = BUILT_PRODUCTS_DIR; };
 		651263C22335BED400704C58 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6522481A234C3DAF00BE0F35 /* For_Sat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = For_Sat.h; sourceTree = "<group>"; };
+		6572BD1E234CAAA100C0B153 /* double_point.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = double_point.h; sourceTree = "<group>"; };
+		65BFF560234CCB4100CFD24C /* Check_Sat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Check_Sat.h; sourceTree = "<group>"; };
 		65F07C4C2335C03900DB4EA8 /* delete_im.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = delete_im.h; sourceTree = "<group>"; };
 		65F07C4D2335C06600DB4EA8 /* delete_id.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = delete_id.h; sourceTree = "<group>"; };
 		65F07C4E2335C0FA00DB4EA8 /* greedy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = greedy.h; sourceTree = "<group>"; };
@@ -74,6 +77,9 @@
 				650236292335C1DB0073C89E /* ddt.h */,
 				6502362A2335C2140073C89E /* ddt_to_pd.h */,
 				6511BF092338C80700DB6A8B /* milp_for_sbox.h */,
+				6522481A234C3DAF00BE0F35 /* For_Sat.h */,
+				6572BD1E234CAAA100C0B153 /* double_point.h */,
+				65BFF560234CCB4100CFD24C /* Check_Sat.h */,
 			);
 			path = Milp;
 			sourceTree = "<group>";

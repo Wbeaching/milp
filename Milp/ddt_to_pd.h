@@ -16,6 +16,7 @@ vector<vector<int>> ddt_to_pd(vector<vector<int>> ddt)
     vector<int> a;
     vector<int> b;
     vector<vector<int>> res;
+    
     for(i=0;i<ddt.size();i++){
         for(j=0;j<ddt[0].size();j++){
             if(ddt[i][j]!=0){

@@ -14,6 +14,7 @@ vector<int> convert10to2(int a,int t)       //t为比特数
 {
     vector<int> c(t);
     int i=1;
+    
     while(a!=0)
     {
         c[t-i]=a%2;
@@ -25,6 +26,7 @@ vector<int> convert10to2(int a,int t)       //t为比特数
 int convert2to10(vector<int> c)
 {
     int a=0,i;
+    
     for(i=c.size()-1;i>=0;i--)
     {
         a+=c[i]*(pow(2.0,(c.size()-1-i)));
@@ -36,6 +38,7 @@ int Xor(int a,int b,int t)    //两个10进制数，按位xor以后变成另一�
     int i=1;
     vector<int> aa(t);
     vector<int> bb(t);
+    
     while(a!=0)
     {
         aa[t-i]=a%2;
@@ -43,6 +46,7 @@ int Xor(int a,int b,int t)    //两个10进制数，按位xor以后变成另一�
         i++;
     }
     int j=1;
+    
     while(b!=0)
     {
         bb[t-j]=b%2;
@@ -50,6 +54,7 @@ int Xor(int a,int b,int t)    //两个10进制数，按位xor以后变成另一�
         j++;
     }
     vector<int> res;
+    
     for(i=0;i<4;i++)
     {
         res.push_back(aa[i]^bb[i]);
@@ -61,6 +66,7 @@ vector<vector<int>> ddt(vector<int> sbox)
     int i,j,a,b;        //a代表输入差分
     vector<vector<int>> res;    //res是16x16的表
     vector<int> tmp;
+    
     for(i=0;i<16;i++)
     {
         tmp.clear();
@@ -71,11 +77,13 @@ vector<vector<int>> ddt(vector<int> sbox)
         res.push_back(tmp);
     }
     vector<vector<int>> diff;   //储存所有可能的4bit数据
+    
     for(i=0;i<16;i++)
     {
         diff.push_back(convert10to2(i,n/2));
     }
     //i遍历所有的输入
+    
     for(i=0;i<16;i++){
         for(j=0;j<16;j++){
             a=Xor(i,j,n/2);

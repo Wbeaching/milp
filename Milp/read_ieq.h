@@ -12,12 +12,19 @@
 #include <fstream>
 vector<vector<int>> read_ieq()
 {
-    ifstream in("/Users/xushengyuan/Desktop/code/Milp/present_ieq.txt");
-    
-    //    ifstream in("presentieq.txt");    
+//    ifstream in("/Users/xushengyuan/Desktop/code/Milp/present_ieq.txt");
+//    ifstream in("/Users/xushengyuan/Desktop/code/Milp/rectangle_ieq.txt");
+//    ifstream in("/Users/xushengyuan/Desktop/code/present_ieq_mid.txt");
+        ifstream in("/Users/xushengyuan/Desktop/code/lblock_ieq_mid.txt");
+//    ifstream in("/Users/xushengyuan/Desktop/code/twine_ieq_mid.txt");
+//    ifstream in("/Users/xushengyuan/Desktop/code/serpents0_ieq_mid.txt");
+//        ifstream in("/Users/xushengyuan/Desktop/code/present_ieq_mid.txt");
+
+
     int t,i=0;
     vector<vector<int>> res;
     vector<int> tmp;
+    
     // 有该文件
     if(in){
         while (in>>t){
@@ -30,7 +37,7 @@ vector<vector<int>> read_ieq()
     }
     else // 没有该文件
     {
-        cout <<"no such file" << endl;
+        cout <<"no ieq file found" << endl;
     }
     return res;
 }

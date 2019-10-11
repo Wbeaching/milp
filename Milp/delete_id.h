@@ -10,11 +10,13 @@
 #define delete_h
 #include <vector>
 #include "delete_im.h"
+
 vector<vector<int>> delete_id(vector<vector<int>>id,vector<int> ieq)   //输入为不可行点集以及一个不等式，输出为新的不可行点集，把该不等式去掉的点去掉之后的新的可行点
 {   int j,k;
     vector<int> tmp;
     vector<vector<int>> res;
     //对固定的不等式，遍历所有不可行点
+    
     for(j=0;j<id.size();j++){
         int a=0;
         //带入不等式计算取值

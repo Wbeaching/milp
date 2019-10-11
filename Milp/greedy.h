@@ -14,8 +14,10 @@
 vector<vector<int>> greedy (vector<vector<int>> id,vector<vector<int>> ieq)
 {
     vector<vector<int>> res;
+    
     int i,flag,max,step=0;
     vector<vector<int>> del;
+    
     while(id.size()!=0&&step<=50){
         step++;
         del.clear();
@@ -23,11 +25,12 @@ vector<vector<int>> greedy (vector<vector<int>> id,vector<vector<int>> ieq)
         flag=0;     //标记去掉最多不可行点的不等式编号
         max=del[0].size();    //去掉不可行点的个数
         for(i=0;i<del.size();i++){
-            if(del[i].size()>max){
+            if(del[i].size()>=max){
                 flag=i;
                 max=del[i].size();
             }
         }
+        
         cout<<endl;
         cout<<"step"<<step<<endl;
         cout<<"使用第"<<flag+1<<"个不等式"<<"去掉点个数："<<del[flag].size();
